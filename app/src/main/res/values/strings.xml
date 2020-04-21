@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WorkoutLog</string>
+    <string name="action_settings">Settings</string>
+    <string name="submit">Wyślij</string>
+    <string name="add_exercise">Dodaj ćwiczenie</string>
+    <string name="nazwa_cwiczenia">Nazwa ćwiczenia</string>
+    <string name="ilosc_serii">Ilość serii</string>
+    <string name="ilosc_powtorzen">Ilość powtórzeń</string>
+</resources>
