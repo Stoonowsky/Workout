@@ -6,7 +6,7 @@
     <string name="nazwa_cwiczenia">Nazwa ćwiczenia</string>
     <string name="ilosc_serii">Ilość serii</string>
     <string name="ilosc_powtorzen">Ilość powtórzeń</string>
-    <string name="navi_bar_profile">Profile</string>
-    <string name="navi_bar_workout">Workout</string>
-    <string name="navi_bar_home">Home</string>
+    <string name="navi_bar_profile">Profil</string>
+    <string name="navi_bar_workout">Trening</string>
+    <string name="navi_bar_home">Główna</string>
 </resources>
