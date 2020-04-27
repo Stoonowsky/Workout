@@ -9,4 +9,10 @@
     <string name="navi_bar_profile">Profil</string>
     <string name="navi_bar_workout">Trening</string>
     <string name="navi_bar_home">Główna</string>
+    <string name="level_easy">Łatwy</string>
+    <string name="level_average">Średni</string>
+    <string name="level_hard">Trudny</string>
+    <string name="type_fbw">Full Body Workout</string>
+    <string name="type_ppl">Push Pull Legs</string>
+    <string name="type_split">Split</string>
 </resources>
