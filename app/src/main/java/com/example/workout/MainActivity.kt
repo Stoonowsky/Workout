@@ -1,6 +1,8 @@
 package com.example.workout
 
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
@@ -12,10 +14,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.workout.chooser.WorkoutItem
+import com.example.workout.profile.UserItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener, WorkoutFragment.OnStartWorkoutListener {
+class MainActivity() : AppCompatActivity(),
+    BottomNavigationView.OnNavigationItemSelectedListener,
+    WorkoutFragment.OnStartWorkoutListener,
+    HomeFragment.OnHomeInteractionListener, Parcelable {
 
     override fun onStartWorkoutSelected(workout: WorkoutItem, string: String) {
         Log.i("MAIN_ACTIVITY", "onStartWorkoutSelected")
@@ -24,6 +30,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private lateinit var viewPager: ViewPager
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var mainPagerAdapter: MainPagerAdapter
+
+    constructor(parcel: Parcel) : this() {
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +85,32 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             return false
         }
         return false
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<MainActivity> {
+        override fun createFromParcel(parcel: Parcel): MainActivity {
+            return MainActivity(parcel)
+        }
+
+        override fun newArray(size: Int): Array<MainActivity?> {
+            return arrayOfNulls(size)
+        }
+    }
+
+    override fun onUserSelected(user: UserItem, image: View) {
+        //todo przejsc do other user activity
+    }
+
+    override fun onLikeSelecter(feedID: String, diff: Int) {
+        //todo like feed
     }
 
 

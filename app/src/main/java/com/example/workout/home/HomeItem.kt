@@ -4,6 +4,7 @@ import java.io.Serializable
 
 data class HomeItem(
             var comment: String = "",
+            var points: Int = 0,
             var workout: String ="",
             var image: String = "",
             var user: String = "",
